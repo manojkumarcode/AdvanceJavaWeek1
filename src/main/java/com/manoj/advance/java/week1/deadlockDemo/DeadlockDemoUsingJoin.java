@@ -45,11 +45,11 @@ public class DeadlockDemoUsingJoin {
         Thread thread1 = new Thread(task1);
         thread1.start();
 
-//        try {
-//            thread1.join();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            thread1.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         Thread thread2 = new Thread(task2);
         thread2.start();
